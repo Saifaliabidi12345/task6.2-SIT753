@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Executing Build stage. Maven would typically be used here for compiling and packaging."
+                echo "Executing Build stage."
             }
         }
         
         stage('Unit and Integration Tests') {
             steps {
-                echo "Executing Unit and Integration Tests. Typically, a tool like JUnit or Katalon would be used here."
+                echo "Executing Unit and Integration Tests. "
             }
             post {
                 success {
@@ -30,13 +30,13 @@ pipeline {
 
         stage('Code Analysis') {
             steps {
-                echo "Performing Code Analysis. SonarQube is a tool commonly used for this stage."
+                echo "Performing Code Analysis. "
             }
         }
 
         stage('Security Scan') {
             steps {
-                echo "Executing Security Scan. OWASP Dependency-Check could be used here."
+                echo "Executing Security Scan. "
             }
             post {
                 success {
@@ -56,19 +56,19 @@ pipeline {
 
         stage('Deploy to Staging') {
             steps {
-                echo "Deploying to Staging Environment. Typically AWS EC2 instances could be used for staging."
+                echo "Deploying to Staging Environment"
             }
         }
 
         stage('Integration Tests on Staging') {
             steps {
-                echo "Running Integration Tests on Staging. Selenium could be used for this purpose."
+                echo "Running Integration Tests on Staging. ."
             }
         }
 
         stage('Deploy to Production') {
             steps {
-                echo "Deploying to Production Environment. AWS EC2 could be used for production deployment."
+                echo "Deploying to Production Environment. ."
             }
         }
     }
